@@ -2169,3 +2169,414 @@ status code was: 200, expected: 401, response time in milliseconds: 2, url: http
 {"code":201,"msg":"LOGIN VALID"}
 src/test/java/Authentication/Authenticacion.feature:289
 11:11:02.992 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/Authentication/Authenticacion.feature
+12:48:42.492 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+12:48:44.214 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:44.401 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.179 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/register
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 49
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"email":"correo1@gmail.com","password":"123456"}
+
+12:48:45.248 [main] DEBUG com.intuit.karate - response time in milliseconds: 67
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 26
+1 < ETag: W/"1a-5XTIQK0rBDy+Q9JmlXPdapTENWw"
+1 < Date: Wed, 01 Jun 2022 17:48:45 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"code":201,"msg":"SAVED"}
+
+12:48:45.298 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.328 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.335 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/register
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 48
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"email":"correo1gmail.com","password":"123456"}
+
+12:48:45.338 [main] DEBUG com.intuit.karate - response time in milliseconds: 3
+1 < 422
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 28
+1 < ETag: W/"1c-HMn5/DSl2UpOlGXD6U35pXAlwbg"
+1 < Date: Wed, 01 Jun 2022 17:48:45 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"code":998,"msg":"INVALID"}
+
+12:48:45.358 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.381 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.389 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/login
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 49
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"email":"correo1@gmail.com","password":"123456"}
+
+12:48:45.394 [main] DEBUG com.intuit.karate - response time in milliseconds: 5
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 32
+1 < ETag: W/"20-gvbJirohiOuHwKVRUucxei1I/oM"
+1 < Date: Wed, 01 Jun 2022 17:48:45 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"code":201,"msg":"LOGIN VALID"}
+
+12:48:45.416 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.443 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.449 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/login
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 48
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"email":"correo1gmail.com","password":"123456"}
+
+12:48:45.457 [main] DEBUG com.intuit.karate - response time in milliseconds: 7
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 32
+1 < ETag: W/"20-gvbJirohiOuHwKVRUucxei1I/oM"
+1 < Date: Wed, 01 Jun 2022 17:48:45 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"code":201,"msg":"LOGIN VALID"}
+
+12:48:45.460 [main] ERROR com.intuit.karate - classpath:Authentication/Authenticacion.feature:73
+Then status 401
+status code was: 200, expected: 401, response time in milliseconds: 7, url: http://localhost:3000/login, response: 
+{"code":201,"msg":"LOGIN VALID"}
+classpath:Authentication/Authenticacion.feature:73
+12:48:45.475 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.520 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.526 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/register
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 49
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"email":"correo1@gmail.com","password":"123456"}
+
+12:48:45.539 [main] DEBUG com.intuit.karate - response time in milliseconds: 11
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 26
+1 < ETag: W/"1a-5XTIQK0rBDy+Q9JmlXPdapTENWw"
+1 < Date: Wed, 01 Jun 2022 17:48:45 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"code":201,"msg":"SAVED"}
+
+12:48:45.555 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.579 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.588 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/register
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 32
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"email":"","password":"123456"}
+
+12:48:45.597 [main] DEBUG com.intuit.karate - response time in milliseconds: 9
+1 < 422
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 29
+1 < ETag: W/"1d-J/88zu273T/r0/ePMbRPn2vRgVo"
+1 < Date: Wed, 01 Jun 2022 17:48:45 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"code":999,"msg":"REQUIRED"}
+
+12:48:45.622 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.646 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.656 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/login
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 49
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"email":"correo1@gmail.com","password":"123456"}
+
+12:48:45.664 [main] DEBUG com.intuit.karate - response time in milliseconds: 7
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 32
+1 < ETag: W/"20-gvbJirohiOuHwKVRUucxei1I/oM"
+1 < Date: Wed, 01 Jun 2022 17:48:45 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"code":201,"msg":"LOGIN VALID"}
+
+12:48:45.689 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.703 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.710 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/login
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 32
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"email":"","password":"123456"}
+
+12:48:45.715 [main] DEBUG com.intuit.karate - response time in milliseconds: 4
+1 < 422
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 29
+1 < ETag: W/"1d-J/88zu273T/r0/ePMbRPn2vRgVo"
+1 < Date: Wed, 01 Jun 2022 17:48:45 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"code":999,"msg":"REQUIRED"}
+
+12:48:45.729 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.747 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.758 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/register
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 49
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"email":"correo1@gmail.com","password":"123456"}
+
+12:48:45.763 [main] DEBUG com.intuit.karate - response time in milliseconds: 4
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 26
+1 < ETag: W/"1a-5XTIQK0rBDy+Q9JmlXPdapTENWw"
+1 < Date: Wed, 01 Jun 2022 17:48:45 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"code":201,"msg":"SAVED"}
+
+12:48:45.781 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.809 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.825 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/register
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 43
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"email":"correo1@gmail.com","password":""}
+
+12:48:45.829 [main] DEBUG com.intuit.karate - response time in milliseconds: 4
+1 < 422
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 29
+1 < ETag: W/"1d-J/88zu273T/r0/ePMbRPn2vRgVo"
+1 < Date: Wed, 01 Jun 2022 17:48:45 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"code":999,"msg":"REQUIRED"}
+
+12:48:45.846 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.876 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.884 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/login
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 49
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"email":"correo1@gmail.com","password":"123456"}
+
+12:48:45.891 [main] DEBUG com.intuit.karate - response time in milliseconds: 4
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 32
+1 < ETag: W/"20-gvbJirohiOuHwKVRUucxei1I/oM"
+1 < Date: Wed, 01 Jun 2022 17:48:45 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"code":201,"msg":"LOGIN VALID"}
+
+12:48:45.931 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.960 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:45.969 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/login
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 43
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"email":"correo1@gmail.com","password":""}
+
+12:48:45.980 [main] DEBUG com.intuit.karate - response time in milliseconds: 7
+1 < 422
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 29
+1 < ETag: W/"1d-J/88zu273T/r0/ePMbRPn2vRgVo"
+1 < Date: Wed, 01 Jun 2022 17:48:45 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"code":999,"msg":"REQUIRED"}
+
+12:48:45.998 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:46.023 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:46.033 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/register
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 49
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"email":"correo1@gmail.com","password":"123456"}
+
+12:48:46.038 [main] DEBUG com.intuit.karate - response time in milliseconds: 4
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 26
+1 < ETag: W/"1a-5XTIQK0rBDy+Q9JmlXPdapTENWw"
+1 < Date: Wed, 01 Jun 2022 17:48:46 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"code":201,"msg":"SAVED"}
+
+12:48:46.050 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:46.068 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:46.075 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/register
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 46
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"email":"correo1@gmail.com","password":"123"}
+
+12:48:46.079 [main] DEBUG com.intuit.karate - response time in milliseconds: 4
+1 < 422
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 28
+1 < ETag: W/"1c-HMn5/DSl2UpOlGXD6U35pXAlwbg"
+1 < Date: Wed, 01 Jun 2022 17:48:46 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"code":998,"msg":"INVALID"}
+
+12:48:46.092 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:46.105 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:46.109 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/login
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 49
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"email":"correo1@gmail.com","password":"123456"}
+
+12:48:46.115 [main] DEBUG com.intuit.karate - response time in milliseconds: 4
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 32
+1 < ETag: W/"20-gvbJirohiOuHwKVRUucxei1I/oM"
+1 < Date: Wed, 01 Jun 2022 17:48:46 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"code":201,"msg":"LOGIN VALID"}
+
+12:48:46.125 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:46.143 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:48:46.158 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/login
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 46
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"email":"correo1@gmail.com","password":"123"}
+
+12:48:46.163 [main] DEBUG com.intuit.karate - response time in milliseconds: 5
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 32
+1 < ETag: W/"20-gvbJirohiOuHwKVRUucxei1I/oM"
+1 < Date: Wed, 01 Jun 2022 17:48:46 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"code":201,"msg":"LOGIN VALID"}
+
+12:48:46.166 [main] ERROR com.intuit.karate - classpath:Authentication/Authenticacion.feature:289
+Then status 401
+status code was: 200, expected: 401, response time in milliseconds: 5, url: http://localhost:3000/login, response: 
+{"code":201,"msg":"LOGIN VALID"}
+classpath:Authentication/Authenticacion.feature:289
