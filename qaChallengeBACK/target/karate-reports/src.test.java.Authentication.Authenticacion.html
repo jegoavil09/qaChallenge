@@ -1,0 +1,4542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.identify("b17fdd9f-08b5-4a53-87f4-e4ffdb4c65cc",{name:"ADMIN"});
+    posthog.capture("report_feature",{karate_version:"1.2.0",karate_meta:null});
+  }
+});
+</script>
+  
+    <title>src.test.java.Authentication.Authenticacion</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">14</div>
+      <div id="nav-fail" class="bg-danger">2</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2022-06-01 11:11:01 a. m.</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1.1:24]"><span>[1.1:24]</span> <span>&#39;CP001: 1.	Verificar que al enviar el campo email con @ en el registro se debe obtener code 201 y msg SAVED.&#39;</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2.1:42]"><span>[2.1:42]</span> <span>&#39;CP002: 2.	Verificar que al enviar el campo “email” sin @ en el registro se debe obtener statusCode 422, code 998 y msg “INVALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[3.1:60]"><span>[3.1:60]</span> <span>&#39;CP003: 3.	Verificar que al enviar el campo “email” con @ en el login se debe obtener code 201 y msg “LOGIN VALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[4.1:78]"><span>[4.1:78]</span> <span>&#39;CP004: 4.	Verificar que al enviar el campo “email” sin @ en el login se debe obtener statusCode 401, code 997 y msg “INVALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[5.1:96]"><span>[5.1:96]</span> <span>&#39;CP005: 5.	Verificar que al enviar el campo obligatorio “email” en el registro se obtenga code 201 y msg “SAVED”.&#39;</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[6.1:114]"><span>[6.1:114]</span> <span>&#39;CP006: 6.	Verificar que al no enviar el campo obligatorio “email” en el registro se obtenga statusCode 422, code 999 y msg “REQUIRED”.&#39;</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[7.1:132]"><span>[7.1:132]</span> <span>&#39;CP007: 7.	Verificar que al enviar el campo obligatorio “email” en el login se obtenga code 201 y msg “LOGIN VALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[8.1:150]"><span>[8.1:150]</span> <span>&#39;CP008: 8.	Verificar que al no enviar el campo obligatorio “email” en el login se obtenga un statusCode 422, code 999 y msg “REQUIRED”.&#39;</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[9.1:168]"><span>[9.1:168]</span> <span>&#39;CP009: 9.	Verificar que al enviar el campo obligatorio “password” en el registro se obtenga code 201 y msg “SAVED”.&#39;</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[10.1:186]"><span>[10.1:186]</span> <span>&#39;CP010: 10.	Verificar que al no enviar el campo obligatorio “password” en el registro se obtenga statusCode 422, code 999 y msg “REQUIRED”.&#39;</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[11.1:204]"><span>[11.1:204]</span> <span>&#39;CP011: 11.	Verificar que al enviar el campo obligatorio “password” en el login se obtenga code 201 y msg “LOGIN VALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[12.1:222]"><span>[12.1:222]</span> <span>&#39;CP012: 12.	Verificar que al no enviar el campo obligatorio “password” en el login se obtenga statusCode 422, code 999 y msg “REQUIRED”.&#39;</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[13.1:240]"><span>[13.1:240]</span> <span>&#39;CP013: 13.	Verificar que al enviar el campo “password” con una cantidad de caracteres mayor o igual a 5 en el registro se obtenga code 201 y msg “SAVED”.&#39;</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[14.1:258]"><span>[14.1:258]</span> <span>&#39;CP014: 14.	Verificar que al enviar el campo “password” con una cantidad de caracteres menor a 5 en el registro se obtenga statusCode 422, code 998 y msg “INVALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[15.1:276]"><span>[15.1:276]</span> <span>&#39;CP015: 15.	Verificar que al enviar el campo “password” con una cantidad de caracteres mayor o igual a 5 en el login se obtenga code 201 y msg “LOGIN VALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[16.1:294]"><span>[16.1:294]</span> <span>&#39;CP016: 16.	Verificar que al enviar el campo “password” con una cantidad de caracteres menor a 5 en el login se obtenga statusCode 422, code 998 y msg “INVALID”.&#39;</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/Authentication/Authenticacion.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Microservicio qaChallenge</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.1:24]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test1</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.1:24]</span>
+                <span class="scenario-name">&#39;CP001: 1.	Verificar que al enviar el campo email con @ en el registro se debe obtener code 201 y msg SAVED.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>408</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.1:24]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.1:24]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:11:00.888 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:24]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/register&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.10">11:11:00.966 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">19</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.11">{ 
+	&quot;email&quot;:&quot;correo1@gmail.com&quot;,
+&quot;password&quot;:&quot;123456&quot;	
+		}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">377</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.18">11:11:01.326 request:
+1 &gt; POST http://localhost:3000/register
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 49
+1 &gt; Host: localhost:3000
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;correo1@gmail.com&quot;,&quot;password&quot;:&quot;123456&quot;}
+
+11:11:01.365 response time in milliseconds: 37
+1 &lt; 200
+1 &lt; X-Powered-By: Express
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 26
+1 &lt; ETag: W/&quot;1a-5XTIQK0rBDy+Q9JmlXPdapTENWw&quot;
+1 &lt; Date: Wed, 01 Jun 2022 16:11:01 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;code&quot;:201,&quot;msg&quot;:&quot;SAVED&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.code == 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">9</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.msg == &quot;SAVED&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.1:42]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test2</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.1:42]</span>
+                <span class="scenario-name">&#39;CP002: 2.	Verificar que al enviar el campo “email” sin @ en el registro se debe obtener statusCode 422, code 998 y msg “INVALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>8</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.1:42]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.1:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:11:01.386 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.28">
+      <div class="step-ref passed">28</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/register&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.28">11:11:01.396 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.29">
+      <div class="step-ref passed">29</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.29">{
+		    &quot;email&quot;:&quot;correo1gmail.com&quot;,
+		    &quot;password&quot;:&quot;123456&quot;
+	  }</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.36">11:11:01.399 request:
+1 &gt; POST http://localhost:3000/register
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 48
+1 &gt; Host: localhost:3000
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;correo1gmail.com&quot;,&quot;password&quot;:&quot;123456&quot;}
+
+11:11:01.401 response time in milliseconds: 2
+1 &lt; 422
+1 &lt; X-Powered-By: Express
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 28
+1 &lt; ETag: W/&quot;1c-HMn5/DSl2UpOlGXD6U35pXAlwbg&quot;
+1 &lt; Date: Wed, 01 Jun 2022 16:11:01 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;code&quot;:998,&quot;msg&quot;:&quot;INVALID&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.37">
+      <div class="step-ref passed">37</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 422</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.38">
+      <div class="step-ref passed">38</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.code == 998</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.39">
+      <div class="step-ref passed">39</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.msg == &quot;INVALID&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3.1:60]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test3</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3.1:60]</span>
+                <span class="scenario-name">&#39;CP003: 3.	Verificar que al enviar el campo “email” con @ en el login se debe obtener code 201 y msg “LOGIN VALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>7</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3.1:60]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3.1:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:11:01.409 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[3.1:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.46">
+      <div class="step-ref passed">46</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.46">11:11:01.416 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.47">
+      <div class="step-ref passed">47</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.47">{
+ &quot;email&quot;:&quot;correo1@gmail.com&quot;,
+ &quot;password&quot;:&quot;123456&quot;
+		}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.54">
+      <div class="step-ref passed">54</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.54">11:11:01.419 request:
+1 &gt; POST http://localhost:3000/login
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 49
+1 &gt; Host: localhost:3000
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;correo1@gmail.com&quot;,&quot;password&quot;:&quot;123456&quot;}
+
+11:11:01.422 response time in milliseconds: 3
+1 &lt; 200
+1 &lt; X-Powered-By: Express
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 32
+1 &lt; ETag: W/&quot;20-gvbJirohiOuHwKVRUucxei1I/oM&quot;
+1 &lt; Date: Wed, 01 Jun 2022 16:11:01 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;code&quot;:201,&quot;msg&quot;:&quot;LOGIN VALID&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.55">
+      <div class="step-ref passed">55</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.56">
+      <div class="step-ref passed">56</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.code == 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.57">
+      <div class="step-ref passed">57</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.msg == &quot;LOGIN VALID&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4.1:78]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test4</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4.1:78]</span>
+                <span class="scenario-name">&#39;CP004: 4.	Verificar que al enviar el campo “email” sin @ en el login se debe obtener statusCode 401, code 997 y msg “INVALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>5</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4.1:78]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4.1:78]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:11:01.429 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[4.1:78]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.64">
+      <div class="step-ref passed">64</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.64">11:11:01.437 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.65">
+      <div class="step-ref passed">65</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.65">{
+  &quot;email&quot;:&quot;correo1gmail.com&quot;,
+  &quot;password&quot;:&quot;123456&quot;
+		}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.72">
+      <div class="step-ref passed">72</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.72">11:11:01.440 request:
+1 &gt; POST http://localhost:3000/login
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 48
+1 &gt; Host: localhost:3000
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;correo1gmail.com&quot;,&quot;password&quot;:&quot;123456&quot;}
+
+11:11:01.442 response time in milliseconds: 2
+1 &lt; 200
+1 &lt; X-Powered-By: Express
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 32
+1 &lt; ETag: W/&quot;20-gvbJirohiOuHwKVRUucxei1I/oM&quot;
+1 &lt; Date: Wed, 01 Jun 2022 16:11:01 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;code&quot;:201,&quot;msg&quot;:&quot;LOGIN VALID&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.73">
+      <div class="step-ref failed">73</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 401</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.73">11:11:01.444 src/test/java/Authentication/Authenticacion.feature:73
+Then status 401
+status code was: 200, expected: 401, response time in milliseconds: 2, url: http://localhost:3000/login, response: 
+{&quot;code&quot;:201,&quot;msg&quot;:&quot;LOGIN VALID&quot;}
+src/test/java/Authentication/Authenticacion.feature:73
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.74">
+      <div class="step-ref skipped">74</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match $.code == 997</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.75">
+      <div class="step-ref skipped">75</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match $.msg == &quot;INVALID&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5.1:96]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test5</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5.1:96]</span>
+                <span class="scenario-name">&#39;CP005: 5.	Verificar que al enviar el campo obligatorio “email” en el registro se obtenga code 201 y msg “SAVED”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>6</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5.1:96]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5.1:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:11:01.449 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.1:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.82">
+      <div class="step-ref passed">82</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/register&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.82">11:11:01.456 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.83">
+      <div class="step-ref passed">83</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.83">{
+ &quot;email&quot;:&quot;correo1@gmail.com&quot;,
+ &quot;password&quot;:&quot;123456&quot;
+		}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.90">
+      <div class="step-ref passed">90</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.90">11:11:01.459 request:
+1 &gt; POST http://localhost:3000/register
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 49
+1 &gt; Host: localhost:3000
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;correo1@gmail.com&quot;,&quot;password&quot;:&quot;123456&quot;}
+
+11:11:01.461 response time in milliseconds: 2
+1 &lt; 200
+1 &lt; X-Powered-By: Express
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 26
+1 &lt; ETag: W/&quot;1a-5XTIQK0rBDy+Q9JmlXPdapTENWw&quot;
+1 &lt; Date: Wed, 01 Jun 2022 16:11:01 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;code&quot;:201,&quot;msg&quot;:&quot;SAVED&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.91">
+      <div class="step-ref passed">91</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.92">
+      <div class="step-ref passed">92</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.code == 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.93">
+      <div class="step-ref passed">93</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.msg == &quot;SAVED&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[6.1:114]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test6</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[6.1:114]</span>
+                <span class="scenario-name">&#39;CP006: 6.	Verificar que al no enviar el campo obligatorio “email” en el registro se obtenga statusCode 422, code 999 y msg “REQUIRED”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>7</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[6.1:114]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[6.1:114]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:11:01.467 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[6.1:114]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.100">
+      <div class="step-ref passed">100</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/register&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.100">11:11:01.472 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.101">
+      <div class="step-ref passed">101</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.101">{
+ &quot;email&quot;:&quot;&quot;,
+ &quot;password&quot;:&quot;123456&quot;
+		}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.108">
+      <div class="step-ref passed">108</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.108">11:11:01.476 request:
+1 &gt; POST http://localhost:3000/register
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 32
+1 &gt; Host: localhost:3000
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;&quot;,&quot;password&quot;:&quot;123456&quot;}
+
+11:11:01.478 response time in milliseconds: 2
+1 &lt; 422
+1 &lt; X-Powered-By: Express
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 29
+1 &lt; ETag: W/&quot;1d-J/88zu273T/r0/ePMbRPn2vRgVo&quot;
+1 &lt; Date: Wed, 01 Jun 2022 16:11:01 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;code&quot;:999,&quot;msg&quot;:&quot;REQUIRED&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.109">
+      <div class="step-ref passed">109</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 422</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.110">
+      <div class="step-ref passed">110</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.code == 999</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.111">
+      <div class="step-ref passed">111</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.msg == &quot;REQUIRED&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[7.1:132]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test7</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[7.1:132]</span>
+                <span class="scenario-name">&#39;CP007: 7.	Verificar que al enviar el campo obligatorio “email” en el login se obtenga code 201 y msg “LOGIN VALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>8</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[7.1:132]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[7.1:132]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:11:01.485 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[7.1:132]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.118">
+      <div class="step-ref passed">118</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.118">11:11:01.490 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.119">
+      <div class="step-ref passed">119</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.119">{
+ &quot;email&quot;:&quot;correo1@gmail.com&quot;,
+ &quot;password&quot;:&quot;123456&quot;
+  	}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.126">
+      <div class="step-ref passed">126</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">7</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.126">11:11:01.494 request:
+1 &gt; POST http://localhost:3000/login
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 49
+1 &gt; Host: localhost:3000
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;correo1@gmail.com&quot;,&quot;password&quot;:&quot;123456&quot;}
+
+11:11:01.498 response time in milliseconds: 4
+1 &lt; 200
+1 &lt; X-Powered-By: Express
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 32
+1 &lt; ETag: W/&quot;20-gvbJirohiOuHwKVRUucxei1I/oM&quot;
+1 &lt; Date: Wed, 01 Jun 2022 16:11:01 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;code&quot;:201,&quot;msg&quot;:&quot;LOGIN VALID&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.127">
+      <div class="step-ref passed">127</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.128">
+      <div class="step-ref passed">128</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.code == 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.129">
+      <div class="step-ref passed">129</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.msg == &quot;LOGIN VALID&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[8.1:150]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test8</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[8.1:150]</span>
+                <span class="scenario-name">&#39;CP008: 8.	Verificar que al no enviar el campo obligatorio “email” en el login se obtenga un statusCode 422, code 999 y msg “REQUIRED”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>7</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[8.1:150]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[8.1:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:11:01.504 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[8.1:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.136">
+      <div class="step-ref passed">136</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.136">11:11:01.510 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.137">
+      <div class="step-ref passed">137</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.137">{
+  &quot;email&quot;:&quot;&quot;,
+  &quot;password&quot;:&quot;123456&quot;
+		}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.144">
+      <div class="step-ref passed">144</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">6</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.144">11:11:01.512 request:
+1 &gt; POST http://localhost:3000/login
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 32
+1 &gt; Host: localhost:3000
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;&quot;,&quot;password&quot;:&quot;123456&quot;}
+
+11:11:01.516 response time in milliseconds: 3
+1 &lt; 422
+1 &lt; X-Powered-By: Express
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 29
+1 &lt; ETag: W/&quot;1d-J/88zu273T/r0/ePMbRPn2vRgVo&quot;
+1 &lt; Date: Wed, 01 Jun 2022 16:11:01 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;code&quot;:999,&quot;msg&quot;:&quot;REQUIRED&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.145">
+      <div class="step-ref passed">145</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 422</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.146">
+      <div class="step-ref passed">146</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.code == 999</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.147">
+      <div class="step-ref passed">147</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.msg == &quot;REQUIRED&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[9.1:168]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test9</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[9.1:168]</span>
+                <span class="scenario-name">&#39;CP009: 9.	Verificar que al enviar el campo obligatorio “password” en el registro se obtenga code 201 y msg “SAVED”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>6</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[9.1:168]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[9.1:168]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:11:01.521 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[9.1:168]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.154">
+      <div class="step-ref passed">154</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/register&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.154">11:11:01.525 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.155">
+      <div class="step-ref passed">155</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.155">{
+ &quot;email&quot;:&quot;correo1@gmail.com&quot;,
+ &quot;password&quot;:&quot;123456&quot;
+		}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.162">
+      <div class="step-ref passed">162</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.162">11:11:01.527 request:
+1 &gt; POST http://localhost:3000/register
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 49
+1 &gt; Host: localhost:3000
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;correo1@gmail.com&quot;,&quot;password&quot;:&quot;123456&quot;}
+
+11:11:01.530 response time in milliseconds: 3
+1 &lt; 200
+1 &lt; X-Powered-By: Express
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 26
+1 &lt; ETag: W/&quot;1a-5XTIQK0rBDy+Q9JmlXPdapTENWw&quot;
+1 &lt; Date: Wed, 01 Jun 2022 16:11:01 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;code&quot;:201,&quot;msg&quot;:&quot;SAVED&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.163">
+      <div class="step-ref passed">163</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.164">
+      <div class="step-ref passed">164</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.code == 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.165">
+      <div class="step-ref passed">165</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.msg == &quot;SAVED&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[10.1:186]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test10</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[10.1:186]</span>
+                <span class="scenario-name">&#39;CP010: 10.	Verificar que al no enviar el campo obligatorio “password” en el registro se obtenga statusCode 422, code 999 y msg “REQUIRED”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>6</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[10.1:186]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[10.1:186]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:11:01.536 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[10.1:186]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.172">
+      <div class="step-ref passed">172</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/register&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.172">11:11:01.540 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.173">
+      <div class="step-ref passed">173</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.173">{
+ &quot;email&quot;:&quot;correo1@gmail.com&quot;,
+ &quot;password&quot;:&quot;&quot;
+		}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.180">
+      <div class="step-ref passed">180</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.180">11:11:01.543 request:
+1 &gt; POST http://localhost:3000/register
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 43
+1 &gt; Host: localhost:3000
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;correo1@gmail.com&quot;,&quot;password&quot;:&quot;&quot;}
+
+11:11:01.545 response time in milliseconds: 2
+1 &lt; 422
+1 &lt; X-Powered-By: Express
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 29
+1 &lt; ETag: W/&quot;1d-J/88zu273T/r0/ePMbRPn2vRgVo&quot;
+1 &lt; Date: Wed, 01 Jun 2022 16:11:01 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;code&quot;:999,&quot;msg&quot;:&quot;REQUIRED&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.181">
+      <div class="step-ref passed">181</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 422</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.182">
+      <div class="step-ref passed">182</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.code == 999</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.183">
+      <div class="step-ref passed">183</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.msg == &quot;REQUIRED&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[11.1:204]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test11</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[11.1:204]</span>
+                <span class="scenario-name">&#39;CP011: 11.	Verificar que al enviar el campo obligatorio “password” en el login se obtenga code 201 y msg “LOGIN VALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>5</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[11.1:204]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[11.1:204]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:11:01.551 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[11.1:204]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.190">
+      <div class="step-ref passed">190</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.190">11:11:01.558 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.191">
+      <div class="step-ref passed">191</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.191">{
+ &quot;email&quot;:&quot;correo1@gmail.com&quot;,
+ &quot;password&quot;:&quot;123456&quot;
+		}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.198">
+      <div class="step-ref passed">198</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.198">11:11:01.561 request:
+1 &gt; POST http://localhost:3000/login
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 49
+1 &gt; Host: localhost:3000
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;correo1@gmail.com&quot;,&quot;password&quot;:&quot;123456&quot;}
+
+11:11:01.562 response time in milliseconds: 1
+1 &lt; 200
+1 &lt; X-Powered-By: Express
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 32
+1 &lt; ETag: W/&quot;20-gvbJirohiOuHwKVRUucxei1I/oM&quot;
+1 &lt; Date: Wed, 01 Jun 2022 16:11:01 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;code&quot;:201,&quot;msg&quot;:&quot;LOGIN VALID&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.199">
+      <div class="step-ref passed">199</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.200">
+      <div class="step-ref passed">200</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.code == 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.201">
+      <div class="step-ref passed">201</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.msg == &quot;LOGIN VALID&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[12.1:222]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test12</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[12.1:222]</span>
+                <span class="scenario-name">&#39;CP012: 12.	Verificar que al no enviar el campo obligatorio “password” en el login se obtenga statusCode 422, code 999 y msg “REQUIRED”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>7</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[12.1:222]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[12.1:222]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:11:01.567 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[12.1:222]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.208">
+      <div class="step-ref passed">208</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.208">11:11:01.572 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.209">
+      <div class="step-ref passed">209</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.209">{
+ &quot;email&quot;:&quot;correo1@gmail.com&quot;,
+ &quot;password&quot;:&quot;&quot;
+		}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.216">
+      <div class="step-ref passed">216</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.216">11:11:01.574 request:
+1 &gt; POST http://localhost:3000/login
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 43
+1 &gt; Host: localhost:3000
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;correo1@gmail.com&quot;,&quot;password&quot;:&quot;&quot;}
+
+11:11:01.577 response time in milliseconds: 2
+1 &lt; 422
+1 &lt; X-Powered-By: Express
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 29
+1 &lt; ETag: W/&quot;1d-J/88zu273T/r0/ePMbRPn2vRgVo&quot;
+1 &lt; Date: Wed, 01 Jun 2022 16:11:01 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;code&quot;:999,&quot;msg&quot;:&quot;REQUIRED&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.217">
+      <div class="step-ref passed">217</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 422</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.218">
+      <div class="step-ref passed">218</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.code == 999</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.219">
+      <div class="step-ref passed">219</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.msg == &quot;REQUIRED&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[13.1:240]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test13</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[13.1:240]</span>
+                <span class="scenario-name">&#39;CP013: 13.	Verificar que al enviar el campo “password” con una cantidad de caracteres mayor o igual a 5 en el registro se obtenga code 201 y msg “SAVED”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>5</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[13.1:240]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[13.1:240]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:11:01.582 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[13.1:240]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.226">
+      <div class="step-ref passed">226</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/register&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.226">11:11:01.586 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.227">
+      <div class="step-ref passed">227</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.227">{
+ &quot;email&quot;:&quot;correo1@gmail.com&quot;,
+ &quot;password&quot;:&quot;123456&quot;
+		}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.234">
+      <div class="step-ref passed">234</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.234">11:11:01.589 request:
+1 &gt; POST http://localhost:3000/register
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 49
+1 &gt; Host: localhost:3000
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;correo1@gmail.com&quot;,&quot;password&quot;:&quot;123456&quot;}
+
+11:11:01.591 response time in milliseconds: 2
+1 &lt; 200
+1 &lt; X-Powered-By: Express
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 26
+1 &lt; ETag: W/&quot;1a-5XTIQK0rBDy+Q9JmlXPdapTENWw&quot;
+1 &lt; Date: Wed, 01 Jun 2022 16:11:01 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;code&quot;:201,&quot;msg&quot;:&quot;SAVED&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.235">
+      <div class="step-ref passed">235</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.236">
+      <div class="step-ref passed">236</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.code == 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.237">
+      <div class="step-ref passed">237</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.msg == &quot;SAVED&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[14.1:258]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test14</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[14.1:258]</span>
+                <span class="scenario-name">&#39;CP014: 14.	Verificar que al enviar el campo “password” con una cantidad de caracteres menor a 5 en el registro se obtenga statusCode 422, code 998 y msg “INVALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>6</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[14.1:258]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[14.1:258]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:11:01.596 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[14.1:258]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.244">
+      <div class="step-ref passed">244</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/register&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.244">11:11:01.603 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.245">
+      <div class="step-ref passed">245</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.245">{
+ &quot;email&quot;:&quot;correo1@gmail.com&quot;,
+ &quot;password&quot;:&quot;123&quot;
+		}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.252">
+      <div class="step-ref passed">252</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.252">11:11:01.605 request:
+1 &gt; POST http://localhost:3000/register
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 46
+1 &gt; Host: localhost:3000
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;correo1@gmail.com&quot;,&quot;password&quot;:&quot;123&quot;}
+
+11:11:01.608 response time in milliseconds: 3
+1 &lt; 422
+1 &lt; X-Powered-By: Express
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 28
+1 &lt; ETag: W/&quot;1c-HMn5/DSl2UpOlGXD6U35pXAlwbg&quot;
+1 &lt; Date: Wed, 01 Jun 2022 16:11:01 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;code&quot;:998,&quot;msg&quot;:&quot;INVALID&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.253">
+      <div class="step-ref passed">253</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 422</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.254">
+      <div class="step-ref passed">254</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.code == 998</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.255">
+      <div class="step-ref passed">255</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.msg == &quot;INVALID&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[15.1:276]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test15</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[15.1:276]</span>
+                <span class="scenario-name">&#39;CP015: 15.	Verificar que al enviar el campo “password” con una cantidad de caracteres mayor o igual a 5 en el login se obtenga code 201 y msg “LOGIN VALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>6</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[15.1:276]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[15.1:276]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:11:01.613 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[15.1:276]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.262">
+      <div class="step-ref passed">262</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.262">11:11:01.619 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.263">
+      <div class="step-ref passed">263</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.263">{
+ &quot;email&quot;:&quot;correo1@gmail.com&quot;,
+ &quot;password&quot;:&quot;123456&quot;
+		}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.270">
+      <div class="step-ref passed">270</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.270">11:11:01.622 request:
+1 &gt; POST http://localhost:3000/login
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 49
+1 &gt; Host: localhost:3000
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;correo1@gmail.com&quot;,&quot;password&quot;:&quot;123456&quot;}
+
+11:11:01.624 response time in milliseconds: 2
+1 &lt; 200
+1 &lt; X-Powered-By: Express
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 32
+1 &lt; ETag: W/&quot;20-gvbJirohiOuHwKVRUucxei1I/oM&quot;
+1 &lt; Date: Wed, 01 Jun 2022 16:11:01 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;code&quot;:201,&quot;msg&quot;:&quot;LOGIN VALID&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.271">
+      <div class="step-ref passed">271</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.272">
+      <div class="step-ref passed">272</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.code == 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.273">
+      <div class="step-ref passed">273</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match $.msg == &quot;LOGIN VALID&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[16.1:294]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test16</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[16.1:294]</span>
+                <span class="scenario-name">&#39;CP016: 16.	Verificar que al enviar el campo “password” con una cantidad de caracteres menor a 5 en el login se obtenga statusCode 422, code 998 y msg “INVALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>8</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[16.1:294]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[16.1:294]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:11:01.629 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[16.1:294]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.280">
+      <div class="step-ref passed">280</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.280">11:11:01.633 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.281">
+      <div class="step-ref passed">281</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.281">{
+ &quot;email&quot;:&quot;correo1@gmail.com&quot;,
+ &quot;password&quot;:&quot;123&quot;
+		}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.288">
+      <div class="step-ref passed">288</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.288">11:11:01.637 request:
+1 &gt; POST http://localhost:3000/login
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 46
+1 &gt; Host: localhost:3000
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;email&quot;:&quot;correo1@gmail.com&quot;,&quot;password&quot;:&quot;123&quot;}
+
+11:11:01.640 response time in milliseconds: 2
+1 &lt; 200
+1 &lt; X-Powered-By: Express
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 32
+1 &lt; ETag: W/&quot;20-gvbJirohiOuHwKVRUucxei1I/oM&quot;
+1 &lt; Date: Wed, 01 Jun 2022 16:11:01 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;code&quot;:201,&quot;msg&quot;:&quot;LOGIN VALID&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.289">
+      <div class="step-ref failed">289</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 401</span>
+      </div>
+    </div>
+    <div class="time-cell failed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.289">11:11:01.641 src/test/java/Authentication/Authenticacion.feature:289
+Then status 401
+status code was: 200, expected: 401, response time in milliseconds: 2, url: http://localhost:3000/login, response: 
+{&quot;code&quot;:201,&quot;msg&quot;:&quot;LOGIN VALID&quot;}
+src/test/java/Authentication/Authenticacion.feature:289
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.290">
+      <div class="step-ref skipped">290</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match $.code == 997</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.291">
+      <div class="step-ref skipped">291</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match $.msg == &quot;INVALID&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

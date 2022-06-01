@@ -1,0 +1,3207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.identify("b17fdd9f-08b5-4a53-87f4-e4ffdb4c65cc",{name:"ADMIN"});
+    posthog.capture("report_feature",{karate_version:"1.2.0",karate_meta:null});
+  }
+});
+</script>
+  
+    <title>src.test.java.Authentication.Authenticacion</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">20</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2022-06-01 10:47:16 a. m.</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1.1:24]"><span>[1.1:24]</span> <span>&#39;CP001: 1.	Verificar que al enviar el campo email con @ en el registro se debe obtener code 201 y msg SAVED.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.1:42]"><span>[2.1:42]</span> <span>&#39;CP002: 2.	Verificar que al enviar el campo “email” sin @ en el registro se debe obtener statusCode 422, code 998 y msg “INVALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[3.1:60]"><span>[3.1:60]</span> <span>&#39;CP003: 3.	Verificar que al enviar el campo “email” con @ en el login se debe obtener code 201 y msg “LOGIN VALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[4.1:80]"><span>[4.1:80]</span> <span>&#39;CP004: 4.	Verificar que al enviar el campo “email” sin @ en el login se debe obtener statusCode 401, code 997 y msg “INVALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[5.1:98]"><span>[5.1:98]</span> <span>&#39;CP005: 5.	Verificar que al enviar el campo obligatorio “email” en el registro se obtenga code 201 y msg “SAVED”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[6.1:116]"><span>[6.1:116]</span> <span>&#39;CP006: 6.	Verificar que al no enviar el campo obligatorio “email” en el registro se obtenga statusCode 422, code 999 y msg “REQUIRED”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[7.1:134]"><span>[7.1:134]</span> <span>&#39;CP007: 7.	Verificar que al enviar el campo obligatorio “email” en el login se obtenga code 201 y msg “LOGIN VALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[8.1:152]"><span>[8.1:152]</span> <span>&#39;CP008: 8.	Verificar que al no enviar el campo obligatorio “email” en el login se obtenga un statusCode 422, code 999 y msg “REQUIRED”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[9.1:170]"><span>[9.1:170]</span> <span>&#39;CP009: 9.	Verificar que al enviar el campo obligatorio “password” en el registro se obtenga code 201 y msg “SAVED”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[10.1:188]"><span>[10.1:188]</span> <span>&#39;CP010: 10.	Verificar que al no enviar el campo obligatorio “password” en el registro se obtenga statusCode 422, code 999 y msg “REQUIRED”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[11.1:206]"><span>[11.1:206]</span> <span>&#39;CP011: 11.	Verificar que al enviar el campo obligatorio “password” en el login se obtenga code 201 y msg “LOGIN VALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[12.1:224]"><span>[12.1:224]</span> <span>&#39;CP012: 12.	Verificar que al no enviar el campo obligatorio “password” en el login se obtenga statusCode 422, code 999 y msg “REQUIRED”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[13.1:242]"><span>[13.1:242]</span> <span>&#39;CP013: 13.	Verificar que al enviar el campo “password” con una cantidad de caracteres mayor o igual a 5 en el registro se obtenga code 201 y msg “SAVED”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[14.1:260]"><span>[14.1:260]</span> <span>&#39;CP014: 14.	Verificar que al enviar el campo “password” con una cantidad de caracteres menor a 5 en el registro se obtenga statusCode 422, code 998 y msg “INVALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[15.1:278]"><span>[15.1:278]</span> <span>&#39;CP015: 15.	Verificar que al enviar el campo “password” con una cantidad de caracteres mayor o igual a 5 en el login se obtenga code 201 y msg “LOGIN VALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[16.1:296]"><span>[16.1:296]</span> <span>&#39;CP016: 16.	Verificar que al enviar el campo “password” con una cantidad de caracteres menor a 5 en el login se obtenga statusCode 422, code 998 y msg “INVALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[17.1:313]"><span>[17.1:313]</span> <span>&#39;CP017: 17.	Verificar que al enviar datos incorrectos en el campo “email” en el registro se obtenga el mensaje “INVALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[18.1:330]"><span>[18.1:330]</span> <span>&#39;CP018: 18.	Verificar que al enviar datos incorrectos en el campo “email” en el login se obtenga el mensaje “INVALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[19.1:347]"><span>[19.1:347]</span> <span>&#39;19.	Verificar que al enviar datos incorrectos en el campo “password” en el registro se obtenga el mensaje “INVALID”.&#39;</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[20.1:364]"><span>[20.1:364]</span> <span>&#39;20.	Verificar que al enviar datos incorrectos en el campo “password” en el login se obtenga el mensaje “INVALID”.&#39;</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/Authentication/Authenticacion.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Microservicio qaChallenge</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.1:24]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test1</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.1:24]</span>
+                <span class="scenario-name">&#39;CP001: 1.	Verificar que al enviar el campo email con @ en el registro se debe obtener code 201 y msg SAVED.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.1:24]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.1:24]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.028 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:24]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.24">
+      <div class="step-ref failed">24</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.24">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:161)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.1:42]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test2</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.1:42]</span>
+                <span class="scenario-name">&#39;CP002: 2.	Verificar que al enviar el campo “email” sin @ en el registro se debe obtener statusCode 422, code 998 y msg “INVALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.1:42]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.1:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.076 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.42">
+      <div class="step-ref failed">42</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.42">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3.1:60]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test3</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3.1:60]</span>
+                <span class="scenario-name">&#39;CP003: 3.	Verificar que al enviar el campo “email” con @ en el login se debe obtener code 201 y msg “LOGIN VALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3.1:60]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3.1:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.083 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[3.1:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.60">
+      <div class="step-ref failed">60</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.60">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4.1:80]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test4</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4.1:80]</span>
+                <span class="scenario-name">&#39;CP004: 4.	Verificar que al enviar el campo “email” sin @ en el login se debe obtener statusCode 401, code 997 y msg “INVALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4.1:80]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4.1:80]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.091 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[4.1:80]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.80">
+      <div class="step-ref failed">80</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.80">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5.1:98]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test5</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5.1:98]</span>
+                <span class="scenario-name">&#39;CP005: 5.	Verificar que al enviar el campo obligatorio “email” en el registro se obtenga code 201 y msg “SAVED”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5.1:98]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5.1:98]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.098 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.1:98]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.98">
+      <div class="step-ref failed">98</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.98">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[6.1:116]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test6</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[6.1:116]</span>
+                <span class="scenario-name">&#39;CP006: 6.	Verificar que al no enviar el campo obligatorio “email” en el registro se obtenga statusCode 422, code 999 y msg “REQUIRED”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[6.1:116]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[6.1:116]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.105 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[6.1:116]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.116">
+      <div class="step-ref failed">116</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.116">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[7.1:134]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test7</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[7.1:134]</span>
+                <span class="scenario-name">&#39;CP007: 7.	Verificar que al enviar el campo obligatorio “email” en el login se obtenga code 201 y msg “LOGIN VALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[7.1:134]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[7.1:134]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.111 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[7.1:134]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.134">
+      <div class="step-ref failed">134</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.134">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[8.1:152]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test8</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[8.1:152]</span>
+                <span class="scenario-name">&#39;CP008: 8.	Verificar que al no enviar el campo obligatorio “email” en el login se obtenga un statusCode 422, code 999 y msg “REQUIRED”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[8.1:152]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[8.1:152]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.117 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[8.1:152]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.152">
+      <div class="step-ref failed">152</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.152">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[9.1:170]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test9</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[9.1:170]</span>
+                <span class="scenario-name">&#39;CP009: 9.	Verificar que al enviar el campo obligatorio “password” en el registro se obtenga code 201 y msg “SAVED”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[9.1:170]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[9.1:170]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.124 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[9.1:170]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.170">
+      <div class="step-ref failed">170</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.170">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[10.1:188]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test10</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[10.1:188]</span>
+                <span class="scenario-name">&#39;CP010: 10.	Verificar que al no enviar el campo obligatorio “password” en el registro se obtenga statusCode 422, code 999 y msg “REQUIRED”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[10.1:188]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[10.1:188]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.130 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[10.1:188]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.188">
+      <div class="step-ref failed">188</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.188">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[11.1:206]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test11</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[11.1:206]</span>
+                <span class="scenario-name">&#39;CP011: 11.	Verificar que al enviar el campo obligatorio “password” en el login se obtenga code 201 y msg “LOGIN VALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[11.1:206]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[11.1:206]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.135 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[11.1:206]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.206">
+      <div class="step-ref failed">206</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.206">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[12.1:224]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test12</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[12.1:224]</span>
+                <span class="scenario-name">&#39;CP012: 12.	Verificar que al no enviar el campo obligatorio “password” en el login se obtenga statusCode 422, code 999 y msg “REQUIRED”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[12.1:224]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[12.1:224]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.141 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[12.1:224]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.224">
+      <div class="step-ref failed">224</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.224">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[13.1:242]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test13</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[13.1:242]</span>
+                <span class="scenario-name">&#39;CP013: 13.	Verificar que al enviar el campo “password” con una cantidad de caracteres mayor o igual a 5 en el registro se obtenga code 201 y msg “SAVED”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[13.1:242]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[13.1:242]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.149 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[13.1:242]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.242">
+      <div class="step-ref failed">242</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.242">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[14.1:260]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test14</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[14.1:260]</span>
+                <span class="scenario-name">&#39;CP014: 14.	Verificar que al enviar el campo “password” con una cantidad de caracteres menor a 5 en el registro se obtenga statusCode 422, code 998 y msg “INVALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[14.1:260]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[14.1:260]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.156 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[14.1:260]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.260">
+      <div class="step-ref failed">260</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.260">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[15.1:278]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test15</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[15.1:278]</span>
+                <span class="scenario-name">&#39;CP015: 15.	Verificar que al enviar el campo “password” con una cantidad de caracteres mayor o igual a 5 en el login se obtenga code 201 y msg “LOGIN VALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[15.1:278]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[15.1:278]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.161 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[15.1:278]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.278">
+      <div class="step-ref failed">278</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.278">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[16.1:296]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test16</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[16.1:296]</span>
+                <span class="scenario-name">&#39;CP016: 16.	Verificar que al enviar el campo “password” con una cantidad de caracteres menor a 5 en el login se obtenga statusCode 422, code 998 y msg “INVALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[16.1:296]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[16.1:296]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.168 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[16.1:296]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.296">
+      <div class="step-ref failed">296</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.296">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[17.1:313]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test17</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[17.1:313]</span>
+                <span class="scenario-name">&#39;CP017: 17.	Verificar que al enviar datos incorrectos en el campo “email” en el registro se obtenga el mensaje “INVALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[17.1:313]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[17.1:313]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.175 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[17.1:313]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.313">
+      <div class="step-ref failed">313</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.313">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[18.1:330]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test18</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[18.1:330]</span>
+                <span class="scenario-name">&#39;CP018: 18.	Verificar que al enviar datos incorrectos en el campo “email” en el login se obtenga el mensaje “INVALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[18.1:330]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[18.1:330]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.181 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[18.1:330]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.330">
+      <div class="step-ref failed">330</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.330">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[19.1:347]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test19</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[19.1:347]</span>
+                <span class="scenario-name">&#39;19.	Verificar que al enviar datos incorrectos en el campo “password” en el registro se obtenga el mensaje “INVALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[19.1:347]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[19.1:347]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.187 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[19.1:347]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.347">
+      <div class="step-ref failed">347</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.347">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[20.1:364]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Test20</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[20.1:364]</span>
+                <span class="scenario-name">&#39;20.	Verificar que al enviar datos incorrectos en el campo “password” en el login se obtenga el mensaje “INVALID”.&#39;</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[20.1:364]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[20.1:364]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url BaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">10:47:16.193 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[20.1:364]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.364">
+      <div class="step-ref failed">364</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>dynamic expression evaluation failed: read(&#39;Authentication.csv&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.364">js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: read(&#39;Authentication.csv&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: D:\JhonEgoavil\Workspace\qaChallenge\src\test\java\Authentication\Authentication.csv (El sistema no puede encontrar el archivo especificado)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:102)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:71)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+	at com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+	at com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+	at com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:107)
+	at com.intuit.karate.core.ScenarioIterator.tryAdvance(ScenarioIterator.java:88)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:294)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206)
+	at java.base/java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:169)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:300)
+	at java.base/java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:132)
+	at com.intuit.karate.core.FeatureRuntime.run(FeatureRuntime.java:165)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intuit.karate.core.SyncExecutorService.execute(SyncExecutorService.java:70)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at com.intuit.karate.Suite.run(Suite.java:235)
+	at com.intuit.karate.Runner$Builder.parallel(Runner.java:575)
+	at com.intuit.karate.cli.IdeMain.main(IdeMain.java:60)
+	at cucumber.api.cli.Main.main(Main.java:34)
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
